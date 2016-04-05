@@ -1,0 +1,8 @@
+F:\GitLab\cypher_project_definition\src\权限\obj\Debug\权限.csprojResolveAssemblyReference.cache
+F:\GitLab\cypher_project_definition\src\权限\bin\Debug\Cypher.权限.dll
+F:\GitLab\cypher_project_definition\src\权限\bin\Debug\Cypher.权限.pdb
+F:\GitLab\cypher_project_definition\src\权限\obj\Debug\Cypher.权限.dll
+F:\GitLab\cypher_project_definition\src\权限\obj\Debug\Cypher.权限.pdb
+F:\GitLab\cypher_project_definition\src\权限\bin\Debug\基础类库.dll
+F:\GitLab\cypher_project_definition\src\权限\bin\Debug\Newtonsoft.Json.dll
+F:\GitLab\cypher_project_definition\src\权限\bin\Debug\基础类库.pdb

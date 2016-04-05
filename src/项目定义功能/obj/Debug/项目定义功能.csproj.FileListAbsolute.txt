@@ -1,0 +1,8 @@
+F:\GitLab\cypher_project_definition\src\项目定义功能\obj\Debug\项目定义功能.csprojResolveAssemblyReference.cache
+F:\GitLab\cypher_project_definition\src\项目定义功能\bin\Debug\项目定义功能.dll
+F:\GitLab\cypher_project_definition\src\项目定义功能\bin\Debug\项目定义功能.pdb
+F:\GitLab\cypher_project_definition\src\项目定义功能\bin\Debug\基础类库.dll
+F:\GitLab\cypher_project_definition\src\项目定义功能\bin\Debug\Newtonsoft.Json.dll
+F:\GitLab\cypher_project_definition\src\项目定义功能\bin\Debug\基础类库.pdb
+F:\GitLab\cypher_project_definition\src\项目定义功能\obj\Debug\项目定义功能.dll
+F:\GitLab\cypher_project_definition\src\项目定义功能\obj\Debug\项目定义功能.pdb

@@ -1,0 +1,5 @@
+F:\GitLab\cypher_project_definition\src\基础类库\bin\Debug\基础类库.dll
+F:\GitLab\cypher_project_definition\src\基础类库\bin\Debug\基础类库.pdb
+F:\GitLab\cypher_project_definition\src\基础类库\obj\Debug\基础类库.dll
+F:\GitLab\cypher_project_definition\src\基础类库\obj\Debug\基础类库.pdb
+F:\GitLab\cypher_project_definition\src\基础类库\bin\Debug\Newtonsoft.Json.dll

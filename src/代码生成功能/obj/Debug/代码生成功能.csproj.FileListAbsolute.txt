@@ -1,0 +1,8 @@
+F:\GitLab\cypher_project_definition\src\代码生成功能\bin\Debug\代码生成功能.dll
+F:\GitLab\cypher_project_definition\src\代码生成功能\bin\Debug\代码生成功能.pdb
+F:\GitLab\cypher_project_definition\src\代码生成功能\bin\Debug\基础类库.dll
+F:\GitLab\cypher_project_definition\src\代码生成功能\bin\Debug\基础类库.pdb
+F:\GitLab\cypher_project_definition\src\代码生成功能\obj\Debug\代码生成功能.csprojResolveAssemblyReference.cache
+F:\GitLab\cypher_project_definition\src\代码生成功能\obj\Debug\代码生成功能.dll
+F:\GitLab\cypher_project_definition\src\代码生成功能\obj\Debug\代码生成功能.pdb
+F:\GitLab\cypher_project_definition\src\代码生成功能\bin\Debug\Newtonsoft.Json.dll

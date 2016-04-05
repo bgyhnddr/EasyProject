@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <meta charset="utf-8" />
+    <script src="src/ref/jQuery/jquery.js"></script>
+    <script src="src/ref/jsTree/jstree.js"></script>
+    <link href="src/ref/jsTree/themes/default/style.css" rel="stylesheet" />
+
+    <script>
+        $(function () {
+            $('#html').jstree();
+
+            // inline data demo
+            $('#data').jstree({
+                'core': {
+                    'data': [
+                        {
+                            id: 1,
+                            type: "root",
+                            "text": "Root node", "children": [
+                                  { "text": "Child node 1", type: "c" },
+                                  { "text": "Child node 2", type: "c" }
+                            ]
+                        }
+                    ]
+                },
+                "plugins": ["contextmenu"],
+                contextmenu: {
+                    items: function (node) {
+                        // The default set of all items
+                        if (node.original.type == "c") {
+                            return {
+                                d: {
+                                    label: "ddd",
+                                    action: function (clickedNode) {
+                                        alert(node.original.text);
+                                    }
+                                }
+                            };
+                        }
+                        else
+                        {
+                            return null;
+                        }
+                    }
+                }
+            });
+
+            // data format demo
+            $('#frmt').jstree({
+                'core': {
+                    'data': [
+                        {
+                            "text": "Root node",
+                            "state": { "opened": true },
+                            "children": [
+                                {
+                                    "text": "Child node 1",
+                                    "state": { "selected": true },
+                                    "icon": "jstree-file"
+                                },
+                                { "text": "Child node 2", "state": { "disabled": true } }
+                            ]
+                        }
+                    ]
+                }
+            });
+
+            // ajax demo
+            $('#ajax').jstree({
+                'core': {
+                    'data': {
+                        "url": "./root.json",
+                        "dataType": "json" // needed only if you do not supply JSON headers
+                    }
+                }
+            });
+
+            // lazy demo
+            $('#lazy').jstree({
+                'core': {
+                    'data': {
+                        "url": "//www.jstree.com/fiddle/?lazy",
+                        "data": function (node) {
+                            return { "id": node.id };
+                        }
+                    }
+                }
+            });
+
+            // data from callback
+            $('#clbk').jstree({
+                'core': {
+                    'data': function (node, cb) {
+                        if (node.id === "#") {
+                            cb([{ "text": "Root", "id": "1", "children": true }]);
+                        }
+                        else {
+                            cb(["Child"]);
+                        }
+                    }
+                }
+            });
+
+            // interaction and events
+            $('#evts_button').on("click", function () {
+                var instance = $('#evts').jstree(true);
+                instance.deselect_all();
+                instance.select_node('1');
+            });
+            $('#evts')
+                .on("changed.jstree", function (e, data) {
+                    if (data.selected.length) {
+                        alert('The selected node is: ' + data.instance.get_node(data.selected[0]).text);
+                    }
+                })
+                .jstree({
+                    'core': {
+                        'multiple': false,
+                        'data': [
+                            {
+                                "text": "Root node", "children": [
+                                      { "text": "Child node 1", "id": 1 },
+                                      { "text": "Child node 2" }
+                                ]
+                            }
+                        ]
+                    }
+                });
+        });
+
+    </script>
+</head>
+<body>
+    <h1>HTML demo</h1>
+    <div id="html" class="demo">
+        <ul>
+            <li data-jstree='{ "opened" : true }'>
+                Root node
+                <ul>
+                    <li data-jstree='{ "selected" : true }'>Child node 1</li>
+                    <li>Child node 2</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <h1>Inline data demo</h1>
+    <div id="data" class="demo"></div>
+    <h1>Data format demo</h1>
+    <div id="frmt" class="demo"></div>
+    <h1>AJAX demo</h1>
+    <div id="ajax" class="demo"></div>
+    <h1>Lazy loading demo</h1>
+    <div id="lazy" class="demo"></div>
+    <h1>Callback function data demo</h1>
+    <div id="clbk" class="demo"></div>
+    <h1>Interaction and events demo</h1>
+    <button id="evts_button">select node with id 1</button> <em>either click the button or a node in the tree</em>
+    <div id="evts" class="demo"></div>
+</body>
+</html>
